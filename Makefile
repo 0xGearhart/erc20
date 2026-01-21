@@ -1,11 +1,11 @@
 -include .env
 
-.PHONY: all test test-zk clean deploy fund help install snapshot coverage-report format anvil install deploy deploy-zk deploy-zk-sepolia deploy-sepolia verify
+.PHONY: all test test-zk clean remove update deploy fund help snapshot coverage-report format anvil install deploy deploy-zk deploy-zk-sepolia deploy-sepolia verify
 
 DEFAULT_ANVIL_KEY := 0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80
 DEFAULT_ZKSYNC_LOCAL_KEY := 0x7726827caac94a7f9e1b160f7ea819f172f7b6f9d2a97f992c38edeab82d4110
 
-all: clean remove install update build
+all: clean remove install build
 
 # Clean the repo
 clean  :; forge clean
